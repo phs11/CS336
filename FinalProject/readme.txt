@@ -1,0 +1,1 @@
+To run the website go to url: http://cs336-36.cs.rutgers.edu:8080/336Final/index.jsp

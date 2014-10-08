@@ -1,0 +1,28 @@
+Your project, like all data-driven Web apps, will go through stages, augmented in our case by checkpoints to make sure you do not fall behind.
+ 
+1. Gathering written requirements
+Part of this has already been done for you by an original writeup this year. Usually, I just do an English discussion in class, which is what you would get from a real-world, computer-illiterate user. You need to shore up the details by essentially thinking through scenarios of how a user would use your applications. The best way to do this is to do a mock-up (called a rapid prototype), in which you describe in  detail how the user will interact with your software. (But I think last year that ended up being too much work, so I tried to lighten the load this year. This is why I have 3 examples.)
+2. Developing an ER diagram for the data to be manipulated by your program.
+3. Developing a relational schema for data to be stored by your program.
+4. Implementing the project.
+Writing code (html,jsp) for the web pages that access this database in order to have a functioning web-site that fulfills the original requirements. You will learn about the tools and techniques for this in recitation, and some of the other resources in this folder.
+
+This project is intended to be a helpful resource for a relatively narrow community of users. [The topic (e.g., a kind of pet or car or disease) is to be chosen by each group in the class.] 
+
+Users can post questions, answers to them,  and comments (on everything).  A thread begins with a "starter post", and then posts can be attached to it. [More generally, a starter post could be FAQ or a "mini-tutorial.] One important feature is that users be able to vote up or down on the thread (its start?) for "interestingness", and on answers to questions (for "helpfulness") so that good answers can rise to the top of the thread, and valuable threads can also rise to the top.  The voting on answers can be accumulated into an expertise score for users, which then helps readers (much like eBay satisfaction scores & number of sales build confidence). Unlike vanilla forums, threads should be able to  ordered by various criteria (activity, recency,...).
+
+ Threads should be associated with a topic (maybe more than one?). The topics of postings  are to be organized hierarchically (a tree or maybe even a partial order), and ideally this hierarchy would be dynamically extensible.
+
+In addition to the above, users should be able to communicate between each other via messages, and perform other operations that are reasonable. (For now, it is up to you to be creative. Later we will fix on a minimal set.)
+
+For the above purpose there are three classes of users:
+
+    normal users, who will need to sign up
+    moderators, who can edit content and move threads, for example
+    an admin, who can create moderator accounts and maybe do any other repair functions.
+
+In order to generate income, the site also does targeted advertising. [As I mentioned in class, I would much prefer if you could find a way to make this be about donations to charities, or even kickstarter.com like things. But for now I will use the terminology of sales rather than donations.] This is handled by a fourth class of users:  sales_staff
+
+After talking to a company, a sales_staff creates an ad.  When a user, who must first become a customer, is shown an ad, (s)he can click on it, and may  purchase some number of the items being advertised.  (We assume that sales_staff handles off_line the credit card debiting, and  shipping.)  The targeting is achieved by (a) associating the ad with certain keywords when it is created, and (b) it is shown to users based on one or more of the following criteria: (i) users who posted under topics that are keywords, (ii) keywords that appear in the "interests" profile of users, (iii) keywords appearing in their posts.
+
+The system is to be accessed through a web interface, programmed in jsp, accessing a mySQL database.
